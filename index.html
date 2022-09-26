@@ -1,57 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifólio | Lucas C Fernandes</title>
+
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+    <link rel="stylesheet" href="src/css/styles.css">
 </head>
+
 <body>
-    <header></header>
-    <main>
-        <section id="inicio">
-            <h2>olá, eu sou</h2>
-            <h1>Lucas Carvalho</h1>
-            <h2>e sou desenvolvedor Front-end.</h2>
-            <a href="">Linkedin</a><a href="">Github</a>
-            <img src="" alt="Lucas Carvalho Fernandes" id="perfil">
-        </section>
-        <section id="sobreMim">
-            <img src="" alt="">
-            <h1>Sobre Mim</h1>
-            <h2>Me chamo Lucas e sou apaixonado por tecnologia, decidi seguir o caminho da programação. Antes de estar aqui eu era acadêmico de farmácia e decidi mudar de área para algo que me identificava mais. Atualmente busco minha primeira experiência profissional na área de Desenvolvimento Web.</h2>
-        </section>
-        <section id="projetos">
-            <h1>Projetos</h1>
-            <div id="projetos-itens">
+    <div id="wrapper">
+
+        <header id="header">
+            <div class="logo">
+                <span class="icon fa-gem"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Meu Portfólio</h1>
+                    <p>Me chamo Lucas, faço Análise e Desenvolvimento de Sistemas e sou desenvolvedor Front-end</p>
+                </div>
+            </div>
+            <nav>
                 <ul>
-                    <li>Projeto pokemon</li>
-                    <li>Projeto Fortnite</li>
-                    <li>Em breve</li>
-                    <li>Em breve</li>
-                    <li>Em breve</li>
-                    <li>Em breve</li>
+                    <li><a href="#intro">Sobre mim</a></li>
+                    <li><a href="#work">Projetos</a></li>
+                    <li><a href="#about">Habilidades</a></li>
+                    <li><a href="#contact">Contato</a></li>
                 </ul>
-            </div>
-            <div>
-                <p><a href="https://github.com/Lucascfer?tab=repositories" target="_blank">Repositório|Github</a></p>
-            </div>
-        </section>
-        <section id="habilidades">
-            <h1>Habilidades</h1>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Git|Github</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>E-mail para contato: lucascf000@gmail.com</p>
-        <p>Criado por Lucas Carvalho</p>
-        
-    </footer>
+            </nav>
+        </header>
+
+        <main>
+
+            <article id="intro">
+                <h2 class="major">Sobre mim</h2>
+                <p>Me chamo Lucas e sou apaixonado por tecnologia, decidi seguir o caminho da programação. Antes de
+                    estar aqui eu era acadêmico de farmácia e decidi mudar de área para algo que me identificava
+                    mais. Atualmente busco minha primeira experiência profissional na área de Desenvolvimento Web.</p>
+            </article>
+
+            <article id="work">
+                <h2 class="major">Projetos</h2>
+                <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+
+            </article>
+
+            <article id="about">
+                <h2 class="major">Habilidades</h2>
+                <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+                <ul>
+
+                </ul>
+            </article>
+
+            <article id="contact">
+                <h2 class="major">Contato</h2>
+                <form method="post" action="#">
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" />
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div class="field">
+                            <label for="message">Messagem</label>
+                            <textarea name="message" id="message" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
+                    </ul>
+                </form>
+                <ul class="icons">
+                    <li><a href="https://www.linkedin.com/in/lucas-carvalho-fernandes-799b9617a/" target="_blank" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
+                    <li><a href="https://github.com/Lucascfer?tab=repositories" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                </ul>
+            </article>
+
+        </main>
+    </div>
 </body>
+
 </html>
