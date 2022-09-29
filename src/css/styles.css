@@ -1,10 +1,125 @@
-.wrappe {
-  display: flexbox;
+body {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
-  padding: 4rem 2rem;
+  color: #dddbdb;
+  background-color: #2b2424;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4rem;
+  max-width: 60rem;
+  min-height: 100vh;
+  margin: auto;
+  vertical-align: baseline;
+  flex: 1;
+}
+body #header {
+  text-align: center;
+}
+body #header .content .inner::before, body #header .content .inner::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  display: block;
+}
+body #header .content .inner h1 {
+  padding: 20px;
+  margin-top: 30px;
+}
+body #header .content .inner p {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+body #header nav {
+  margin-top: 0;
+}
+body #header nav ul {
+  display: inline-flex;
+}
+body #header nav ul li {
+  border: solid 1px #dddbdb;
+  border-top: none;
+  padding: 15px;
+}
+body #header nav ul li:first-child {
+  border-bottom-left-radius: 5px;
+}
+body #header nav ul li:last-child {
+  border-bottom-right-radius: 5px;
+}
+body li {
+  display: inline;
+  flex-direction: row;
+  padding: 5px;
+}
+body article {
+  background-color: rgba(27, 31, 34, 0.85);
+  border-radius: 4px;
+  max-width: 40rem;
+  height: auto;
+  padding: 40px 20px;
+  margin: 5rem;
+  position: relative;
+}
+body article.hidden {
+  display: none;
+}
+body article h2 {
+  display: inline-block;
+  padding: 5px;
+  margin-top: 20px;
+}
+body article h2::after {
+  content: "";
+  width: 100%;
+  height: 0.5px;
+  background: #fff;
+  display: block;
+  margin-top: 10px;
+}
+body article p {
+  text-transform: none;
+  letter-spacing: 1.5px;
+  line-height: 1.75rem;
+}
+body article ul, body article form, body article p {
+  margin-top: 2rem;
+}
+body article form .fields input, body article form .fields textarea {
+  background-color: transparent;
+  border-radius: 4px;
+  border: solid 1px #ffffff;
+  color: inherit;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+body article form .fields input {
+  height: 2.75rem;
+}
+body article form .fields textarea {
+  height: 10rem;
+  width: calc(100% - 1.9rem);
+}
+body article form .fields .field {
+  flex-grow: 0;
+  flex-shrink: 0;
+  padding: 1.5rem 0 0 1.5rem;
+}
+body article form .fields .field label {
+  font-size: 10px;
+  letter-spacing: px;
+}
+body article form .fields .half {
+  width: calc(50% - 1.5rem);
+  display: inline-table;
+  flex-direction: row;
 }
 
 /*# sourceMappingURL=styles.css.map */

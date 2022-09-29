@@ -1,15 +1,131 @@
-.wrappe
-    display: flexbox
+body
+    display: flex
     flex-direction: column
     align-items: center
-    justify-content: space-between
+    justify-content: center
     position: relative
-    padding: 4rem 2rem
+    color: #dddbdb
+    // background-image: url(../imagens/bg.jpg)
+    background-color: #2b2424
+    background-repeat: no-repeat
+    background-attachment: fixed
+    font-family: sans-serif
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 4rem
+    max-width: 60rem
+    min-height: 100vh
+    margin: auto
+    vertical-align: baseline
+    flex: 1
 
-    header
-        
-    main
-        
-        article
+    #header
+        text-align: center
 
-            form
+        .content
+
+            .inner
+                &::before, &::after
+                    content: ''
+                    width: 100%
+                    height: 1px
+                    background: #fff
+                    display: block
+
+                h1
+                    padding: 20px
+                    margin-top: 30px
+
+                p
+                    padding: 20px
+                    margin-bottom: 30px
+
+        nav
+            margin-top: 0
+
+            ul
+                display: inline-flex
+
+                li
+                    border: solid 1px #dddbdb
+                    border-top: none
+                    padding: 15px
+
+                    &:first-child
+                        border-bottom-left-radius: 5px
+
+                    &:last-child
+                        border-bottom-right-radius: 5px
+
+    li
+        display: inline
+        flex-direction: row
+        padding: 5px
+
+    article
+        background-color: rgba(27, 31, 34, 0.85)
+        border-radius: 4px
+        max-width: 40rem
+        height: auto
+        padding: 40px 20px
+        margin: 5rem
+        position: relative
+
+        &.hidden
+            display: none
+
+        h2
+            display: inline-block
+            padding: 5px
+            margin-top: 20px
+
+            &::after
+                content: ''
+                width: 100%
+                height: 0.5px
+                background: #fff
+                display: block
+                margin-top: 10px
+
+        p
+            text-transform: none
+            letter-spacing: 1.5px
+            line-height: 1.75rem
+
+        ul, form, p
+            margin-top: 2rem
+
+        form
+
+            .fields
+                input, textarea
+                    background-color: transparent
+                    border-radius: 4px
+                    border: solid 1px #ffffff
+                    color: inherit
+                    display: block
+                    width: 100%
+                    margin-top: 20px
+                
+                input
+                    height: 2.75rem
+
+                textarea
+                    height: 10rem
+                    width: calc( 100% - 1.9rem )
+
+                .field
+                    flex-grow: 0
+                    flex-shrink: 0
+                    padding: 1.5rem 0 0 1.5rem
+                
+                    label
+                        font-size: 10px
+                        letter-spacing: px
+
+                .half
+                    width: calc(50% - 1.5rem)
+                    display: inline-table
+                    flex-direction: row
+                        
+
