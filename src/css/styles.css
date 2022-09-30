@@ -7,12 +7,31 @@
 }
 
 .themeLight {
-  --bg-gradient: radial-gradient(circle, rgba(188,255,254,1) 23%, rgba(131,168,200,1) 79%, rgba(28,46,76,1) 100%);
+  --bg-gradient: radial-gradient(circle, #52d2cf 23%, #8bafce 79%, #545960 100%);
   --header-bg: #ffffff;
   --article-bg: #e2e5f0;
   --article-shadow: #484B6A;
   --font-color: #252525;
   --font-color-hover: #001f6d68;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: var(--cor-branca);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 body {
@@ -35,8 +54,23 @@ body {
   vertical-align: baseline;
   flex: 1;
 }
+body .hidden {
+  display: none;
+}
+body li {
+  display: inline;
+  flex-direction: row;
+  padding: 5px;
+}
 body #header {
   text-align: center;
+}
+body #header img {
+  border-radius: 100%;
+  width: 8rem;
+  border: solid 3px var(--font-color);
+  padding: -1px;
+  margin: 20px;
 }
 body #header .content .inner::before, body #header .content .inner::after {
   content: "";
@@ -45,13 +79,10 @@ body #header .content .inner::before, body #header .content .inner::after {
   background: var(--font-color);
   display: block;
 }
-body #header .content .inner h1 {
+body #header .content .inner h1, body #header .content .inner p {
   padding: 20px;
-  margin-top: 30px;
-}
-body #header .content .inner p {
-  padding: 20px;
-  margin-bottom: 30px;
+  margin: 20px auto;
+  line-height: 2rem;
 }
 body #header nav {
   margin-top: 0;
@@ -76,11 +107,6 @@ body #header nav ul li:last-child {
 body #header nav ul li:hover {
   background-color: var(--font-color-hover);
   transition-timing-function: ease-in-out;
-}
-body li {
-  display: inline;
-  flex-direction: row;
-  padding: 5px;
 }
 body article {
   background-color: var(--article-bg);
@@ -119,11 +145,33 @@ body article#ability ul {
   line-height: 8rem;
 }
 body article#ability ul i {
-  box-shadow: 0 0 20px 1px var(--font-color);
   border-radius: 5px;
   padding: 10px;
   font-size: 100px;
   margin: 1rem;
+}
+body article#ability ul i:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: 0.1s ease-in-out;
+}
+body article#ability ul i.fa-html5:hover {
+  color: #ff4848;
+}
+body article#ability ul i.fa-css3-alt:hover {
+  color: #2200ce;
+}
+body article#ability ul i.fa-sass:hover {
+  color: #ff22de;
+}
+body article#ability ul i.fa-js:hover {
+  color: #fafd3b;
+}
+body article#ability ul i.fa-react:hover {
+  color: #31d6ff;
+}
+body article#ability ul i.fa-github:hover {
+  color: var(--font-color-hover);
 }
 body article form .fields input, body article form .fields textarea {
   background-color: transparent;

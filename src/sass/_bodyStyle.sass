@@ -1,0 +1,27 @@
+@mixin bodyStyle 
+    @include bg
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+    color: var(--font-color)
+    background-repeat: no-repeat
+    background-attachment: fixed
+    font-family: sans-serif
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 4rem
+    max-width: 60rem
+    min-height: 100vh
+    margin: auto
+    vertical-align: baseline
+    flex: 1
+
+    .hidden
+        display: none
+    
+    li
+        display: inline
+        flex-direction: row
+        padding: 5px
