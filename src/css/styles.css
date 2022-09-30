@@ -1,11 +1,28 @@
+.themeDark {
+  --bg-gradient: radial-gradient(circle, rgba(19,30,47,1) 0%, rgba(42,94,119,1) 100%);
+  --article-bg: #1d2124d9;
+  --article-shadow: #161722;
+  --font-color: #dddbdb;
+  --font-color-hover: #a796967e;
+}
+
+.themeLight {
+  --bg-gradient: radial-gradient(circle, rgba(188,255,254,1) 23%, rgba(131,168,200,1) 79%, rgba(28,46,76,1) 100%);
+  --header-bg: #ffffff;
+  --article-bg: #e2e5f0;
+  --article-shadow: #484B6A;
+  --font-color: #252525;
+  --font-color-hover: #001f6d68;
+}
+
 body {
+  background: var(--bg-gradient);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  color: #dddbdb;
-  background-color: #2b2424;
+  color: var(--font-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: sans-serif;
@@ -25,7 +42,7 @@ body #header .content .inner::before, body #header .content .inner::after {
   content: "";
   width: 100%;
   height: 1px;
-  background: #fff;
+  background: var(--font-color);
   display: block;
 }
 body #header .content .inner h1 {
@@ -42,8 +59,11 @@ body #header nav {
 body #header nav ul {
   display: inline-flex;
 }
+body #header nav ul:hover {
+  cursor: pointer;
+}
 body #header nav ul li {
-  border: solid 1px #dddbdb;
+  border: solid 1px var(--font-color);
   border-top: none;
   padding: 15px;
 }
@@ -53,33 +73,36 @@ body #header nav ul li:first-child {
 body #header nav ul li:last-child {
   border-bottom-right-radius: 5px;
 }
+body #header nav ul li:hover {
+  background-color: var(--font-color-hover);
+  transition-timing-function: ease-in-out;
+}
 body li {
   display: inline;
   flex-direction: row;
   padding: 5px;
 }
 body article {
-  background-color: rgba(27, 31, 34, 0.85);
+  background-color: var(--article-bg);
   border-radius: 4px;
   max-width: 40rem;
   height: auto;
-  padding: 40px 20px;
+  padding: 60px 40px;
   margin: 5rem;
   position: relative;
-}
-body article.hidden {
-  display: none;
+  box-shadow: var(--article-shadow);
 }
 body article h2 {
   display: inline-block;
   padding: 5px;
   margin-top: 20px;
+  margin-bottom: 2rem;
 }
 body article h2::after {
   content: "";
   width: 100%;
   height: 0.5px;
-  background: #fff;
+  background: var(--font-color);
   display: block;
   margin-top: 10px;
 }
@@ -88,17 +111,29 @@ body article p {
   letter-spacing: 1.5px;
   line-height: 1.75rem;
 }
-body article ul, body article form, body article p {
-  margin-top: 2rem;
+body article#ability ul {
+  display: flexbox;
+  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  line-height: 8rem;
+}
+body article#ability ul i {
+  box-shadow: 0 0 20px 1px var(--font-color);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 100px;
+  margin: 1rem;
 }
 body article form .fields input, body article form .fields textarea {
   background-color: transparent;
   border-radius: 4px;
-  border: solid 1px #ffffff;
+  border: solid 1px var(--font-color);
   color: inherit;
   display: block;
   width: 100%;
   margin-top: 20px;
+  padding: 0 1rem;
 }
 body article form .fields input {
   height: 2.75rem;
@@ -114,12 +149,63 @@ body article form .fields .field {
 }
 body article form .fields .field label {
   font-size: 10px;
-  letter-spacing: px;
+  letter-spacing: 2px;
 }
 body article form .fields .half {
   width: calc(50% - 1.5rem);
   display: inline-table;
   flex-direction: row;
+}
+body article form ul {
+  margin-top: 10px;
+}
+body article form ul li {
+  padding: 0 0 0 24px;
+}
+body article form ul li input[type=submit], body article form ul li [type=reset] {
+  padding: 0 1.25rem 0 1.35rem;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  font-size: 0.8 rem;
+  font-weight: 300;
+  height: 2.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px var(--font-color);
+  color: var(--font-color);
+  display: inline-block;
+  border: 0;
+}
+body article form ul li input[type=submit]:hover, body article form ul li [type=reset]:hover {
+  background-color: var(--font-color-hover);
+}
+body article form ul li input.primary {
+  color: var(--article-bg);
+  background-color: var(--font-color);
+  font-weight: 600;
+}
+body article form ul li input.primary:hover {
+  box-shadow: none;
+}
+body article .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+body article .icons i {
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1px var(--font-color);
+  display: inline-block;
+  height: 2.25rem;
+  width: 2.25rem;
+  line-height: 2.2rem;
+  text-align: center;
+}
+body article .icons i:hover {
+  color: var(--font-color-hover);
+  box-shadow: inset 0 0 0 1px var(--font-color-hover);
 }
 
 /*# sourceMappingURL=styles.css.map */
