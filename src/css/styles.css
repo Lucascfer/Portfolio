@@ -118,6 +118,17 @@ body article {
   position: relative;
   box-shadow: var(--article-shadow);
 }
+body article i.fa-x {
+  display: block;
+  float: right;
+  position: relativo;
+  font-size: 20px;
+  padding: 0.75rem;
+}
+body article i.fa-x:hover {
+  color: var(--font-color-hover);
+  cursor: pointer;
+}
 body article h2 {
   display: inline-block;
   padding: 5px;

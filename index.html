@@ -25,27 +25,28 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#intro">Sobre mim</a></li>
-                    <li><a href="#work">Projetos</a></li>
-                    <li><a href="#ability">Habilidades</a></li>
-                    <li><a href="#contact">Contato</a></li>
+                    <li onclick="openTab(intro)">Sobre mim</li>
+                    <li onclick="openTab(work)">Projetos</li>
+                    <li onclick="openTab(ability)">Habilidades</li>
+                    <li onclick="openTab(contact)">Contato</li>
                 </ul>
             </nav>
         </header>
-        
+
         <main>
-            <article id="intro">
+            <article id="intro" class="hidden">
+                <i class="fa-solid fa-x"></i>
                 <h2 class="major">Sobre mim</h2>
-                <p>Me chamo Lucas e sou apaixonado por tecnologia, decidi seguir o caminho da programação. Antes de
-                    estar aqui eu era acadêmico de farmácia e decidi mudar de área para algo que me identificava
-                    mais. Atualmente busco minha primeira experiência profissional na área de Desenvolvimento Web.</p>
+                <p>Me chamo Lucas e sou apaixonado por tecnologia, decidi seguir o caminho da programação. Antes de estar aqui eu era acadêmico de farmácia e decidi mudar de área para algo que me identificava mais. Atualmente busco minha primeira experiência profissional na área de Desenvolvimento Web.</p>
             </article>
 
-            <article id="work">
+            <article id="work" class="hidden">
+                <i class="fa-solid fa-x"></i>
                 <h2 class="major">Projetos</h2>
             </article>
 
-            <article id="ability">
+            <article id="ability" class="hidden">
+                <i class="fa-solid fa-x"></i>
                 <h2 class="major">Habilidades</h2>
                 <ul>
                     <li><i class="fa-brands fa-html5"></i></li>
@@ -57,7 +58,8 @@
                 </ul>
             </article>
 
-            <article id="contact">
+            <article id="contact" class="hidden">
+                <i class="fa-solid fa-x"></i>
                 <h2 class="major">Contato</h2>
                 <form method="post" action="#">
                     <div class="fields">
@@ -80,13 +82,17 @@
                     </ul>
                 </form>
                 <ul class="icons">
-                    <li><a href="https://www.linkedin.com/in/lucas-carvalho-fernandes-799b9617a/" target="_blank" class="icon brands"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/Lucascfer?tab=repositories" target="_blank" class="icon brands"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/lucas-carvalho-fernandes-799b9617a/" target="_blank"
+                            class="icon brands"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Lucascfer?tab=repositories" target="_blank" class="icon brands"><i
+                                class="fa-brands fa-github"></i></a></li>
                 </ul>
+                
             </article>
         </main>
     </div>
 
     <script src="src/js/index.js"></script>
 </body>
+
 </html>
