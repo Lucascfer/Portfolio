@@ -52,7 +52,6 @@ body {
   min-height: 100vh;
   margin: auto;
   vertical-align: baseline;
-  flex: 1;
 }
 body .hidden {
   display: none;
