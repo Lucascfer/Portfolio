@@ -4,7 +4,6 @@ const work = document.getElementById("work")
 const ability = document.getElementById("ability")
 const contact = document.getElementById("contact")
 
-let nav = document.querySelectorAll("ul")[0].children
 
 let icon = document.querySelectorAll(".fa-x")
 
@@ -24,6 +23,7 @@ icon.forEach(icon => {
     })
 })
 
+let nav = document.querySelectorAll("ul")[0].children
 nav.forEach(nav => {
     nav.addEventListener("click", event => {
         console.log("clicou")
