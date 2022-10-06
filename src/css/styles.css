@@ -95,9 +95,8 @@ body #header .content .inner {
 }
 body #header .content .inner.preload {
   content: 0;
-  height: 0px;
+  height: 0;
   color: transparent;
-  width: 0;
 }
 body #header .content .inner h1, body #header .content .inner p {
   padding: 20px;
