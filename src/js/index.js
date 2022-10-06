@@ -1,31 +1,61 @@
 const header = document.getElementById("header")
-const intro = document.getElementById("intro")
-const work = document.getElementById("work")
-const ability = document.getElementById("ability")
-const contact = document.getElementById("contact")
 
+var icon = document.querySelectorAll(".fa-x")
 
-let icon = document.querySelectorAll(".fa-x")
-
-function openTab(way) {
-    way.classList.toggle("hidden")
-    hideHeader()
-}
-
-function hideHeader() {
-    header.classList.toggle("hidden")
-}
-
+// Para fechar a aba aberta
 icon.forEach(icon => {
     icon.addEventListener("click", event => {
-        var tab = event.path[1]
+        const tab = event.path[1]
         openTab(tab)
     })
 })
 
-let nav = document.querySelectorAll("ul")[0].children
-nav.forEach(nav => {
-    nav.addEventListener("click", event => {
-        console.log("clicou")
+// Para navegação
+function navigation() {
+    const nav = [
+        aboutMe = document.querySelectorAll("li")[0],
+        projects = document.querySelectorAll("li")[1],
+        skills = document.querySelectorAll("li")[2],
+        contacts = document.querySelectorAll("li")[3],
+    ]
+
+    // nav.forEach(nav => {
+    //     nav.addEventListener("click", e => {
+    //         console.log(e)
+    //     })
+    // })
+
+    aboutMe.addEventListener("click", () => {
+        openTab(intro)
     })
-})
+
+    projects.addEventListener("click", () => {
+        openTab(work)
+    })
+
+    skills.addEventListener("click", () => {
+        openTab(ability)
+    })
+
+    contacts.addEventListener("click", () => {
+        openTab(contact)
+    })
+}
+navigation()
+
+//Para troca de visualização
+function openTab(way) {
+    way.classList.toggle("hidden")
+    header.classList.toggle("hidden")
+}
+
+//preload
+const headerText = document.querySelector('.inner')
+headerText.classList.add('preload')
+
+console.log(headerText)
+
+
+setTimeout(() => {
+    headerText.classList.remove('preload')
+}, 500)
