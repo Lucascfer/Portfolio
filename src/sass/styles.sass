@@ -2,12 +2,22 @@
 @import 'bodyStyle'
 @import 'headerStyle'
 @import 'articleStyle'
-@import 'animate.css'
 
 *
     margin: 0
     padding: 0
     box-sizing: border-box
+    
+    &::-webkit-scrollbar
+        width: 5px
+
+    &::-webkit-scrollbar-track 
+        background: var(--article-bg)
+
+    &::-webkit-scrollbar-thumb
+        border-radius: 20px
+        border: 3px solid var(--font-color)
+
 
 a
     text-decoration: none
@@ -22,7 +32,7 @@ img
 body
     @include bodyStyle
 
-    #header
+    header
         @include headerStyle
 
     article

@@ -38,6 +38,24 @@
         letter-spacing: 1.5px
         line-height: 1.75rem
 
+    #repositories
+        ul
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+
+            a
+                padding: 20px
+                border: 1px solid grey
+                margin: 20px
+                display: block
+                border-radius: 7px
+                transition: 0.3s ease-in-out
+
+                &:hover
+                    background-color: var(--font-color-hover)
+                    color: #fff
+
     &#ability
         ul
             display: flexbox
@@ -56,16 +74,16 @@
                     cursor: pointer
                     transform: scale(1.3)
                     transition: 0.1s ease-in-out
-                
+
                 &.fa-html5:hover
                     color: #ff4848
 
                 &.fa-css3-alt:hover
-                    color: #2200ce
+                    color: #3f27b6
 
                 &.fa-sass:hover
                     color: #ff22de
-                
+
                 &.fa-js:hover
                     color: #fafd3b
 
@@ -73,8 +91,8 @@
                     color: #31d6ff
 
                 &.fa-github:hover
-                    color: var(--font-color-hover)          
-                    
+                    color: var(--font-color-hover)
+
     form
         .fields
             input, textarea

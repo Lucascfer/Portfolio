@@ -1,47 +1,37 @@
-const header = document.getElementById("header")
-const theme = document.getElementById("theme")
-const headerText = document.querySelector(".inner")
-var icon = document.querySelectorAll(".fa-x")
+import { header, theme, headerText, icon, aboutMe, projects, skills, contacts } from "./variables.js"
+
+//preload
+headerText.classList.add("preload")
+setTimeout(() => {
+    headerText.classList.remove("preload")
+}, 500)
 
 // Para fechar a aba aberta
 icon.forEach(icon => {
     icon.addEventListener("click", event => {
         const tab = event.path[1]
         openTab(tab)
-    })
-})
+    })    
+})    
 
 // Para navegação
 function navigation() {
-    const nav = [
-        aboutMe = document.querySelectorAll("li")[0],
-        projects = document.querySelectorAll("li")[1],
-        skills = document.querySelectorAll("li")[2],
-        contacts = document.querySelectorAll("li")[3],
-    ]
-
-    // nav.forEach(nav => {
-    //     nav.addEventListener("click", e => {
-    //         console.log(e)
-    //     })
-    // })
-
     aboutMe.addEventListener("click", () => {
         openTab(intro)
-    })
+    })    
 
     projects.addEventListener("click", () => {
         openTab(work)
-    })
+    })    
 
     skills.addEventListener("click", () => {
         openTab(ability)
-    })
+    })    
 
     contacts.addEventListener("click", () => {
         openTab(contact)
-    })
-}
+    })    
+}    
 navigation()
 
 //Para troca de visualização
@@ -49,12 +39,6 @@ function openTab(way) {
     way.classList.toggle("hidden")
     header.classList.toggle("hidden")
 }
-
-//preload
-headerText.classList.add("preload")
-setTimeout(() => {
-    headerText.classList.remove("preload")
-}, 500)
 
 //troca de tema
 theme.addEventListener("click", () => {
@@ -64,3 +48,20 @@ theme.addEventListener("click", () => {
         headerText.classList.remove("preload")
     }, 1000)
 })
+
+//repositório do GitHub
+async function repos() {
+    const response = await fetch("https://api.github.com/users/Lucascfer/repos?per_page=10")
+    return await response.json()
+}
+
+function getUserProfile() {
+    repos().then(reposData => {
+        let userRepositories = ""
+        reposData.forEach(repo => {
+            userRepositories += `<li><a href="${repo.html_url}" target="_blank">${repo.name}</a></li>`
+        })
+        document.querySelector("#repositories").innerHTML += `<ul>${userRepositories}</ul>`
+    })
+}
+getUserProfile()

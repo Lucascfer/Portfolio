@@ -1,4 +1,3 @@
-@import 'animate.css';
 .themeDark {
   --bg-gradient: radial-gradient(circle, rgba(19,30,47,1) 5%, rgba(42,94,119,1) 100%);
   --article-bg: #1d2124d9;
@@ -10,7 +9,6 @@
 
 .themeLight {
   --bg-gradient: #b7abab;
-  --header-bg: #ffffff;
   --article-bg: #e2e5f0;
   --article-shadow: #484B6A;
   --font-color: #252525;
@@ -22,6 +20,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: var(--article-bg);
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 3px solid var(--font-color);
 }
 
 a {
@@ -72,28 +80,28 @@ body li {
   flex-direction: row;
   padding: 5px;
 }
-body #header {
+body header {
   text-align: center;
 }
-body #header .switch {
+body header .switch {
   position: absolute;
   display: inline-block;
   width: 8rem;
   height: 8rem;
   margin: 20px;
 }
-body #header .switch input {
+body header .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-body #header .switch input:focus + .slider {
+body header .switch input:focus + .slider {
   box-shadow: 0 0 1px #2196F3;
 }
-body #header .switch input:checked + .slider::before {
+body header .switch input:checked + .slider::before {
   transform: translateX(5.5rem);
 }
-body #header .switch .slider {
+body header .switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -104,7 +112,7 @@ body #header .switch .slider {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-body #header .switch .slider:before {
+body header .switch .slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -115,10 +123,10 @@ body #header .switch .slider:before {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-body #header .switch .slider.round {
+body header .switch .slider.round {
   border-radius: 100%;
 }
-body #header .switch .slider.round:before {
+body header .switch .slider.round:before {
   border-radius: 100%;
   background: var(--icon-theme);
   background-color: #252525;
@@ -126,70 +134,70 @@ body #header .switch .slider.round:before {
   background-repeat: no-repeat;
   background-position: center;
 }
-body #header img {
+body header img {
   border-radius: 100%;
   width: 8rem;
   border: solid 3px var(--font-color);
   padding: -1px;
   margin: 20px;
 }
-body #header .content::before {
+body header .content::before {
   content: "";
   width: 100%;
   height: 1px;
   background: var(--font-color);
   display: block;
 }
-body #header .content .inner {
+body header .content .inner {
   transition: 0.6s ease-in;
   height: 15rem;
   width: 55rem;
   overflow: hidden;
 }
-body #header .content .inner.preload {
+body header .content .inner.preload {
   content: 0;
   height: 0;
   color: transparent;
   transition: 0.5s ease-in-out;
 }
-body #header .content .inner.preload h1, body #header .content .inner.preload p {
+body header .content .inner.preload h1, body header .content .inner.preload p {
   opacity: 0;
   transition: 0.1s ease-in-out;
 }
-body #header .content .inner h1, body #header .content .inner p {
+body header .content .inner h1, body header .content .inner p {
   padding: 20px;
   margin: 20px auto;
   line-height: 2rem;
   transition: 0.5s ease-in-out;
 }
-body #header nav {
+body header nav {
   margin-top: 0;
 }
-body #header nav::before {
+body header nav::before {
   content: "";
   width: 100%;
   height: 1px;
   background: var(--font-color);
   display: block;
 }
-body #header nav ul {
+body header nav ul {
   display: inline-flex;
 }
-body #header nav ul:hover {
+body header nav ul:hover {
   cursor: pointer;
 }
-body #header nav ul li {
+body header nav ul li {
   border: solid 1px var(--font-color);
   border-top: none;
   padding: 15px;
 }
-body #header nav ul li:first-child {
+body header nav ul li:first-child {
   border-bottom-left-radius: 5px;
 }
-body #header nav ul li:last-child {
+body header nav ul li:last-child {
   border-bottom-right-radius: 5px;
 }
-body #header nav ul li:hover {
+body header nav ul li:hover {
   background-color: var(--font-color-hover);
   transition-timing-function: ease-in-out;
 }
@@ -233,6 +241,23 @@ body article p {
   letter-spacing: 1.5px;
   line-height: 1.75rem;
 }
+body article #repositories ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body article #repositories ul a {
+  padding: 20px;
+  border: 1px solid grey;
+  margin: 20px;
+  display: block;
+  border-radius: 7px;
+  transition: 0.3s ease-in-out;
+}
+body article #repositories ul a:hover {
+  background-color: var(--font-color-hover);
+  color: #fff;
+}
 body article#ability ul {
   display: flexbox;
   text-align: center;
@@ -255,7 +280,7 @@ body article#ability ul i.fa-html5:hover {
   color: #ff4848;
 }
 body article#ability ul i.fa-css3-alt:hover {
-  color: #2200ce;
+  color: #3f27b6;
 }
 body article#ability ul i.fa-sass:hover {
   color: #ff22de;
