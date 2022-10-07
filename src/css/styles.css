@@ -1,26 +1,27 @@
 @import 'animate.css';
 .themeDark {
-  --bg-gradient: radial-gradient(circle, rgba(19,30,47,1) 0%, rgba(42,94,119,1) 100%);
+  --bg-gradient: radial-gradient(circle, rgba(19,30,47,1) 5%, rgba(42,94,119,1) 100%);
   --article-bg: #1d2124d9;
   --article-shadow: #161722;
   --font-color: #dddbdb;
   --font-color-hover: #a796967e;
+  --icon-theme: url("../imagens/icon-sun.svg");
 }
 
 .themeLight {
-  --bg-gradient: radial-gradient(circle, #52d2cf 23%, #8bafce 79%, #545960 100%);
+  --bg-gradient: #b7abab;
   --header-bg: #ffffff;
   --article-bg: #e2e5f0;
   --article-shadow: #484B6A;
   --font-color: #252525;
   --font-color-hover: #001f6d68;
+  --icon-theme: url("../imagens/icon-moon.svg");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 a {
@@ -74,6 +75,57 @@ body li {
 body #header {
   text-align: center;
 }
+body #header .switch {
+  position: absolute;
+  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  margin: 20px;
+}
+body #header .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+body #header .switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+body #header .switch input:checked + .slider::before {
+  transform: translateX(5.5rem);
+}
+body #header .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body #header .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+body #header .switch .slider.round {
+  border-radius: 100%;
+}
+body #header .switch .slider.round:before {
+  border-radius: 100%;
+  background: var(--icon-theme);
+  background-color: #252525;
+  padding: 3px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 body #header img {
   border-radius: 100%;
   width: 8rem;
@@ -92,17 +144,23 @@ body #header .content .inner {
   transition: 0.6s ease-in;
   height: 15rem;
   width: 55rem;
+  overflow: hidden;
 }
 body #header .content .inner.preload {
   content: 0;
   height: 0;
   color: transparent;
+  transition: 0.5s ease-in-out;
+}
+body #header .content .inner.preload h1, body #header .content .inner.preload p {
+  opacity: 0;
+  transition: 0.1s ease-in-out;
 }
 body #header .content .inner h1, body #header .content .inner p {
   padding: 20px;
   margin: 20px auto;
   line-height: 2rem;
-  transition: 0.5s ease-in;
+  transition: 0.5s ease-in-out;
 }
 body #header nav {
   margin-top: 0;

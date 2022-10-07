@@ -1,5 +1,6 @@
 const header = document.getElementById("header")
-
+const theme = document.getElementById("theme")
+const headerText = document.querySelector(".inner")
 var icon = document.querySelectorAll(".fa-x")
 
 // Para fechar a aba aberta
@@ -50,12 +51,16 @@ function openTab(way) {
 }
 
 //preload
-const headerText = document.querySelector('.inner')
-headerText.classList.add('preload')
-
-console.log(headerText)
-
-
+headerText.classList.add("preload")
 setTimeout(() => {
-    headerText.classList.remove('preload')
+    headerText.classList.remove("preload")
 }, 500)
+
+//troca de tema
+theme.addEventListener("click", () => {
+    document.querySelector('body').classList = [theme.checked ? 'themeLight' : 'themeDark']
+    headerText.classList.add("preload")
+    setTimeout(() => {
+        headerText.classList.remove("preload")
+    }, 1000)
+})

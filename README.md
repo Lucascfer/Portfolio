@@ -1,3 +1,3 @@
 # Portfólio
 
- Meu portfólio, criado para me apresentar e os meus projetos que irei desenvolver
+ Criado para me apresentar e os meus projetos que desenvolvi
