@@ -377,4 +377,83 @@ body article .icons i:hover {
   box-shadow: inset 0 0 0 1px var(--font-color-hover);
 }
 
+@media (max-width: 1280px) {
+  #wrapper {
+    box-sizing: border-box;
+    width: 90%;
+  }
+  #wrapper header .inner {
+    text-align: center;
+    box-sizing: border-box;
+    width: auto;
+  }
+}
+@media (max-width: 736px) {
+  #wrapper header nav ul {
+    display: flexbox;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+  }
+  #wrapper header nav ul li {
+    width: 10rem;
+  }
+  #wrapper header nav ul li:first-child {
+    border-bottom-left-radius: 0px;
+  }
+  #wrapper header nav ul li:last-child {
+    border-bottom-right-radius: 0px;
+  }
+  #wrapper article {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+  }
+  #wrapper article form {
+    text-align: center;
+    align-items: center;
+  }
+  #wrapper article form ul li {
+    padding: 0;
+    margin: 0;
+  }
+  #wrapper article form ul input {
+    margin: 10px;
+  }
+  #wrapper article form .fields .field {
+    margin: 10px 0;
+    padding: 0;
+    display: inline-flexbox;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: column;
+  }
+  #wrapper article form .fields .field textarea {
+    width: 100%;
+  }
+}
+@media (max-width: 530px) {
+  #wrapper header .content .inner {
+    margin: 0;
+    overflow: auto;
+  }
+  #wrapper header .content .inner h1, #wrapper header .content .inner p {
+    margin: 0;
+  }
+  #wrapper header .content .inner h1 {
+    font-size: 20px;
+  }
+  #wrapper header .content .inner p {
+    font-size: 12px;
+  }
+  #wrapper header nav ul li {
+    width: 100%;
+  }
+  #wrapper article ul {
+    justify-content: center;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
