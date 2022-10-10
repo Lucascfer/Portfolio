@@ -1,7 +1,6 @@
 import { header, theme, headerText, icon, aboutMe, projects, skills, contacts } from "./variables.js"
 
 //preload
-headerText.classList.add("preload")
 setTimeout(() => {
     headerText.classList.remove("preload")
 }, 500)
