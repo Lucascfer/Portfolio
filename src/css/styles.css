@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 .themeDark {
   --bg-gradient: radial-gradient(circle, rgba(19,30,47,1) 5%, rgba(42,94,119,1) 100%);
   --article-bg: #1d2124d9;
@@ -20,6 +21,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+  text-transform: uppercase;
 }
 *::-webkit-scrollbar {
   width: 5px;
@@ -55,9 +58,7 @@ body {
   color: var(--font-color);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: sans-serif;
   letter-spacing: 1px;
-  text-transform: uppercase;
   padding: 4rem;
   max-width: 60rem;
   min-height: 100vh;
@@ -170,6 +171,13 @@ body header .content .inner h1, body header .content .inner p {
   line-height: 2rem;
   transition: 0.5s ease-in-out;
 }
+body header .content .inner p {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+body header .content .inner h1 {
+  letter-spacing: 3px;
+}
 body header nav {
   margin-top: 0;
 }
@@ -190,6 +198,7 @@ body header nav ul li {
   border: solid 1px var(--font-color);
   border-top: none;
   padding: 15px;
+  font-size: 12px;
 }
 body header nav ul li:first-child {
   border-bottom-left-radius: 5px;
@@ -293,6 +302,9 @@ body article#ability ul i.fa-react:hover {
 }
 body article#ability ul i.fa-github:hover {
   color: var(--font-color-hover);
+}
+body article#ability ul i.fa-git-alt:hover {
+  color: #ff7d37;
 }
 body article form .fields input, body article form .fields textarea {
   background-color: transparent;
