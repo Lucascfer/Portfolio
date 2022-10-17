@@ -1,0 +1,21 @@
+body .hidden {
+    display: block;
+}
+
+body header .switch {
+    display: none;
+}
+
+body header .content .inner.preload{
+    height: var(--font-color);
+    color: aqua;
+}
+
+body header .content .inner.preload h1, body header .content .inner.preload p {
+    display: block;
+    opacity: 1;
+}
+
+body main article .fa-x {
+    display: none;
+}
