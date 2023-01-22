@@ -261,6 +261,7 @@ body article #repositories ul a {
   display: block;
   border-radius: 7px;
   transition: 0.3s ease-in-out;
+  word-break: break-all;
 }
 body article #repositories ul a:hover {
   background-color: var(--font-color-hover);

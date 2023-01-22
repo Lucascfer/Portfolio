@@ -8,7 +8,7 @@ setTimeout(() => {
 // Para fechar a aba aberta
 icon.forEach(icon => {
     icon.addEventListener("click", event => {
-        const tab = event.path[1]
+        const tab = event.composedPath()[1]
         openTab(tab)
     })    
 })    
